@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="de">
+<head>
+  
+  <!-- 01_Tutorials/010_Quickstart.html -->
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <meta content="jbake" name="generator">
+  <meta content="INDEX, FOLLOW" name="ROBOTS">
+
+  <title>Quickstart</title>
+  <meta content="docToolchain" property="og:title">
+  <meta content="build your dev docs the easy way..." property="og:description">
+  <meta content="website" property="og:type">
+  <meta content="docToolchain" property="og:site_name">
+  <meta content="docToolchain" itemprop="name">
+  <meta content="build your dev docs the easy way..." itemprop="description">
+  <meta content="summary" name="twitter:card">
+  <meta content="docToolchain" name="twitter:title">
+  <meta content="build your dev docs the easy way..." name="twitter:description">
+
+  <link as="style" href="../css/main.min.881fe5f7b53609f55ebfb496c7097c3b30b2e8ceb20a54bc6a48350ded67224f.css"
+        rel="preload">
+  <link href="../css/main.min.881fe5f7b53609f55ebfb496c7097c3b30b2e8ceb20a54bc6a48350ded67224f.css" integrity=""
+        rel="stylesheet">
+  <link href="../css/asciidoctor.css" rel="stylesheet">
+  <link href="../css/prettify.css" rel="stylesheet">
+
+    <!-- favicon generated with https://www.favicon-generator.org/ -->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+  <script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+          src="../js/jquery-3.5.1.min.js"></script>
+  <style>
+      div.bg-light {
+          background-color: rgba(127, 180, 224, 0.3) !important;
+      }
+      //for blog posts
+
+  span.blogtag {
+      border-radius: 10px;
+      background-color: #30638E;
+      color: white;
+      padding: 5px 10px;
+  }
+  span.blogblogtag a {
+      color: white;
+      padding: 0
+  }
+  span.blogtag span {
+      margin-left: 10px;
+      border-radius: 10px;
+      background-color: white;
+      color: #30638E;
+  }
+  div.td-toc {
+    height: calc(100vh - 5rem) !important;
+  }
+  div#toctitle {
+    display: none
+  }
+  #td-section-nav {
+    max-height: calc(100vh - 4rem);
+    font-size: smaller;
+    line-hight: 1.1;
+  }
+  .td-page-meta {
+      font-size: smaller;
+      line-hight: 1.1;
+  }
+  #td-section-nav ul.td-sidebar-nav__section  {
+    padding-left:0px;
+  }
+  .match {
+      font-size: smaller;
+  }
+      .admonitionblock td.icon .fa:before {
+          font-size: xxx-large;
+      }
+  </style>
+
+   <style>
+    div.openblock.primary div.content, div.openblock.secondary div.content {
+        border: 1px solid #7a2518;
+        padding: 5px;
+    }
+    div.openblock.primary div.content div.content, div.openblock.secondary div.content div.content {
+        border: 0px solid #7a2518;
+        padding: 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .switch {
+        border-width: 1px 1px 0 1px;
+        border-style: solid;
+        border-color: #7a2518;
+        display: inline-block;
+    }
+
+    .switch--item {
+        padding: 2px 10px;
+        background-color: #ffffff;
+        color: #7a2518;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .switch--item:not(:first-child) {
+        border-width: 0 0 0 1px;
+        border-style: solid;
+        border-color: #7a2518;
+    }
+
+    .switch--item.selected {
+        background-color: #7a2519;
+        color: #ffffff;
+    }
+    </style>
+
+
+</head>
+
+<body onload="prettyPrint()" class="td-section">
+<header>
+	
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+    <a class="navbar-brand" href="../index.html">
+        <span class="navbar-logo"></span><span
+            class="font-weight-bold">docToolchain Tutorials</span>
+    </a>
+    <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+        <ul class="navbar-nav mt-2 mt-lg-0">
+    <li class="nav-item mr-4 mb-2 mb-lg-0"><!--img src="../images/status.png" alt="status" width="16" height="16" onerror="this.style.display='none'"--></li>
+
+            <li class="nav-item mr-4 mb-2 mb-lg-0">
+                <a class="nav-link " href="../09_About/00_About.html"><span>About</span></a>
+            </li>
+
+            <li class="nav-item mr-4 mb-2 mb-lg-0">
+                <a class="nav-link active" href="../01_Tutorials/010_Quickstart.html"><span>Tutorials</span></a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="navbar-nav d-none d-lg-block" >
+        <form action="../search.html">
+        <input aria-label="Search this site…" autocomplete="off" class="form-control td-search-input"
+               placeholder=" Search this site…" type="search" name="q">
+        </form>
+    </div>
+</nav>
+
+</header>
+<div class="container-fluid td-outer">
+	<div class="td-main">
+		<div class="row flex-xl-nowrap">
+			<div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+				<div class="td-sidebar__inner" id="td-sidebar-menu" >
+					
+        <form class="td-sidebar__search d-flex align-items-center d-lg-none" action="../search.html">
+
+            <input aria-label="Search this site…" name="q" autocomplete="off" class="form-control td-search-input"
+                   placeholder=" Search this site…" type="search">
+
+
+            <button aria-controls="td-docs-nav" aria-expanded="false"
+                    aria-label="Toggle section navigation" class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" data-target="#td-section-nav"
+                    data-toggle="collapse" type="button">
+            </button>
+        </form>
+
+        <nav class="collapse td-sidebar-nav" id="td-section-nav" >
+
+            <ul class="td-sidebar-nav__section pr-md-3">
+                <li class="td-sidebar-nav__section-title">
+                    <span class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Tutorials</span>
+                </li>
+                <ul>
+                    <li class="collapse show" id="docs">
+                        <ul class="td-sidebar-nav__section pr-md-3">
+                            
+                            
+                            <li class="td-sidebar-nav__section-title">
+                                <a class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section active"
+                                   href="../01_Tutorials/010_Quickstart.html">Quickstart</a>
+                            </li>
+                            
+                            <!--li class="td-sidebar-nav__section-title">
+                                <a  href="/docs/overview/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Overview</a>
+                            </li>
+                            <ul>
+                                <li class="collapse show">
+                                    <a class="td-sidebar-link td-sidebar-link__page " id="m-docsgetting-startedexample-page" href="/docs/getting-started/example-page/">Example Page</a>
+                                </li>
+                            </ul-->
+                        </ul>
+
+        </nav>
+
+				</div>
+			</div>
+			<div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+				<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+					
+        <a href="https://github.com/doctoolchain/doctoolchain/edit/-/src/docs/01_Tutorials/010_Quickstart.adoc"
+           target="_blank"><i class="fa fa-edit fa-fw"></i> Improve this doc</a>
+        <!--a href="https://github.com/google/docsy-example/new/master/content/en/docs/_index.md?filename=change-me.md&amp;value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A"
+           target="_blank"><i class="fa fa-edit fa-fw"></i> Create child page</a-->
+        <a href="https://github.com/docToolchain/tutorials/issues/new?title=Docs%3A+Feedback+for+%27Quickstart%27&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23page: https://github.com/doctoolchain/doctoolchain/edit/-/src/docs/01_Tutorials/010_Quickstart.adoc%0A%23branch: -" target="_blank"><i
+                class="fab fa-github fa-fw"></i> Create an issue</a>
+        <!--a href="https://github.com/google/docsy/issues/new" target="_blank"><i
+                class="fas fa-tasks fa-fw"></i> Create project issue</a-->
+        <!--a href="https://example.docsy.dev/docs/_print/" id="print"><i class="fa fa-print fa-fw"></i> Print
+        entire section</a-->
+        
+        <hr />
+        <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_building_docs_with_doctoolchain_a_quickstart_guide">Building Docs with docToolchain: A Quickstart Guide</a></li>
+<li><a href="#_what_is_docs_as_code">What Is Docs-as-Code?</a></li>
+<li><a href="#_what_is_doctoolchain">What is docToolchain?</a></li>
+<li><a href="#_before_you_begin">Before You Begin</a></li>
+<li><a href="#_installing_doctoolchain">Installing docToolchain</a></li>
+<li><a href="#_setting_up_doctoolchain">Setting Up docToolchain</a></li>
+<li><a href="#_building_your_first_docs_with_doctoolchain">Building Your First Docs with docToolchain</a></li>
+<li><a href="#_creating_your_first_html_site">Creating Your First HTML Site</a></li>
+<li><a href="#_deploying_your_docs">Deploying your Docs</a></li>
+<li><a href="#_summary_and_next_steps">Summary and Next Steps</a></li>
+<li><a href="#_join_our_community">Join Our Community</a></li>
+<li><a href="#_resources">Resources</a></li>
+</ul>
+</div>
+
+
+				</div>
+			</div>
+			<main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+				    <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+        <ol class="breadcrumb spb-1">
+            <!--li aria-current="page" class="breadcrumb-item active">
+                <a href="https://example.docsy.dev/docs/">Documentation</a>
+            </li-->
+
+        </ol>
+    </nav>
+
+
+    <div class="td-content">
+        <p>
+            
+<div class="sect1">
+<h2 id="_building_docs_with_doctoolchain_a_quickstart_guide">Building Docs with docToolchain: A Quickstart Guide</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This guide explains how to use docToolchain to build great docs using
+the docs-as-code methodology. You’ll get from zero to hero in only a few
+steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Installing the tool.</p>
+</li>
+<li>
+<p>Setup and configuration.</p>
+</li>
+<li>
+<p>Building your docs.</p>
+</li>
+<li>
+<p>Publishing docs to HTML.</p>
+</li>
+<li>
+<p>Deploying your docs.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_docs_as_code">What Is Docs-as-Code?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Docs-as-code means treating your docs just like developers treat code.
+This approach is perfect for technical teams because everyone writes
+docs using similar tools, practices, and workflows.</p>
+</div>
+<div class="paragraph">
+<p>The docs-as-code approach takes all the things we love about software
+development and makes them relevant to docs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Version control using Git.</p>
+</li>
+<li>
+<p>Collaboration and review.</p>
+</li>
+<li>
+<p>Consistent design.</p>
+</li>
+<li>
+<p>Automated testing, building, and delivery.</p>
+</li>
+<li>
+<p>Issue tracking.</p>
+</li>
+<li>
+<p>Use of plain-text markup (Markdown, reStructuredText, AsciiDoc).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition to the above, docs-as-code helps build a culture where
+developers and technical writers can easily work side-by-side using
+similar tools.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_doctoolchain">What is docToolchain?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="http://doctoolchain.org/docToolchain/v2.0.x/10_about/20_what-is-doctoolchain.html">docToolchain</a>
+is an open-source documentation generation tool that uses the
+docs-as-code approach. It was initially developed by
+<a href="https://www.polywork.com/rdmueller">Ralf D. Müller</a> and now has over 70
+contributors. It takes markup files and uses them to create technical
+documentation in several formats, including websites, PDFs, and
+presentations. Because of docToolchain’s underlying Gradle build system,
+it can provide automation, which is very important for writing and
+maintaining robust technical documentation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_before_you_begin">Before You Begin</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>You will need an integrated development environment (IDE) or text
+editor. In this guide, we&#8217;ll use the
+<a href="https://www.jetbrains.com/idea/download/">community version of
+IntelliJ IDEA</a> which is free to download.</p>
+</li>
+<li>
+<p>You will need to be comfortable working with the command line.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now, let&#8217;s get started!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installing_doctoolchain">Installing docToolchain</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can install docToolchain in three different environments. More
+information can be found in our comprehensive
+<a href="http://doctoolchain.org/docToolchain/v2.0.x/020_tutorial/010_Install.html">installation</a>
+documentation. In this guide, we’ll install docToolchain in a
+Windows environment.</p>
+</div>
+<div class="paragraph">
+<p>Install docToolchain by running the following command in your command
+prompt (cmd.exe).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">curl -Lo dtcw.bat doctoolchain.github.io/dtcw.bat</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, verify the installation by running the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">./dtcw.ps1 tasks --group=doctoolchain</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command shows all docToolchain tasks available and verifies that
+the installation was successful. The installation is an incremental
+process, so it takes a while.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_up_doctoolchain">Setting Up docToolchain</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After installation, the first step is to get the
+<a href="https://arg42.org">arc42 template</a> in AsciiDoc format. The arc42
+template will provide you with a good starting point for your
+documentation and some basic content. Get the template by running this
+command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">/dtcw.ps1 downloadTemplate</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, we’ll render the template to HTML and PDF by running these
+commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">./dtcw.ps1 generateHTML
+
+./dtcw.ps1 generatePDF</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_building_your_first_docs_with_doctoolchain">Building Your First Docs with docToolchain</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You now have almost everything in place to start building docs with
+docToolchain. For this exercise, we will replicate the Introduction
+pages of the <a href="https://developers.buycoins.africa/">BuyCoins API
+documentation</a> and
+<a href="https://docs.polygon.technology/docs/home/new-to-polygon">Polygon
+documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>First, you’ll need to know more about AsciiDoc. AsciiDoc is a markup
+language. It is straightforward, allows for customization, and is
+similar to Markdown. Head over to the
+<a href="https://asciidoctor.org/docs/">AsciiDoc documentation</a> and take a
+look at the <a href="https://powerman.name/doc/asciidoc">cheat sheet</a> to
+learn how to write AsciiDoc. It would also make things easier if you use
+<a href="https://thetimetube.herokuapp.com/asciidoc/">AsciiDoc Viewer</a> as an
+online editor as you practice.</p>
+</div>
+<div class="paragraph">
+<p>You will also need an IDE. In this guide, we use the
+<a href="https://www.jetbrains.com/idea/download/">community version of
+IntelliJ IDEA</a> When you open docToolchain in your IDE, it will
+recognize the AsciiDoc file extension and ask you to install the
+IntelliJ IDEA Asciidoctor plugin. This plugin provides support for the
+AsciiDoc markup language, as well as a two-pane AsciiDoc editor based on
+Asciidoctor that includes a live preview.</p>
+</div>
+<div class="paragraph">
+<p>And finally, you can use AsciiDoc to write your documentation. You can
+find the source code for the AsciiDoc format of the
+<a href="https://github.com/Bennykillua/Git-Markup/blob/main/BuyCoins%20API%20in%20AsciiDoc/buycoin.adoc">BuyCoins
+API</a> and the
+<a href="https://github.com/Bennykillua/Git-Markup/blob/main/Polygon/Polygon.adoc">Polygon
+documentation</a> in GitHub.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="..//images/010/image1.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_your_first_html_site">Creating Your First HTML Site</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You’re now ready to create your first HTML site using the files you
+created. But first, you need to make a change to the
+<code>docToolchainConfig.groovy</code> file.</p>
+</div>
+<div class="paragraph">
+<p>To do this, open the <code>docToolchainConfig.groovy file</code> in your IDE. Once
+open, add the following after line 13:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[file: 'arc42/chapters/Polygon.adoc', formats: ['html','pdf']],</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[file: 'arc42/chapters/Buycoin.adoc', formats: ['html','pdf']],`</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="..//images/010/image2.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Open a command prompt in your docToolchain folder and run this command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="console">|./dtcw.ps1 generateSite</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="..//images/010/image3.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Once the command has been executed, you will find your output in
+<code>index.html</code> which is located at
+Doctool\build\microsite\output\index.html in your docToolchain folder.</p>
+</div>
+<div class="paragraph">
+<p>Here’s what the final output looks like:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="..//images/010/image4.gif" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>You can do many more things with docToolchain beyond the static site
+generator, using other features like <code>exportExcel</code> and <code>generatePDF</code>.
+Look out for future guides and tutorials!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deploying_your_docs">Deploying your Docs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use your static HTML sites to deploy your documentation wherever
+you want, just like you would with any static site. However, there are
+various ways to achieve this. One of the easiest is to use
+<a href="https://pages.github.com/">GitHub Pages</a> or
+<a href="https://www.netlify.com/">Netlify</a>.</p>
+</div>
+<div class="paragraph">
+<p>GitHub Pages is a static site hosting service that takes your source
+codes directly from a GitHub repository, runs them through a build
+process, then publishes a website. Your site will be hosted on GitHub&#8217;s
+github.io domain or your own custom domain. Learn more by reading the
+<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">documentation</a>.</p>
+</div>
+<div class="paragraph">
+<p>On the other hand, Netlify allows you to deploy your application
+automatically in seconds by running the <code>deploy</code> command on every branch
+push. First, create a Netlify account, link it to your GitHub account,
+then select the repository. You then specify your build command as well
+as the destination folder. This
+<a href="https://docs.netlify.com/site-deploys/create-deploys/">documentation</a>
+will teach you how to do that.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_summary_and_next_steps">Summary and Next Steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this guide, you learned about docs-as-code, how to install
+docToolchain, and how to build a simple document. You also learned how
+simple it is to render a static site with docToolchain.</p>
+</div>
+<div class="paragraph">
+<p>So, what should your next steps be? When it comes to docToolchain,
+there&#8217;s a whole universe to discover! In upcoming tutorials, you’ll
+learn about the different features of docToolchain and get familiar with
+other tasks like <code>exportExcel</code> and <code>generatePDF</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_join_our_community">Join Our Community</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>docToolchain is an open-source documentation generation tool that makes
+it easy to create and maintain comprehensive technical documentation.
+Consider making a
+<a href="https://doctoolchain.github.io/docToolchain/v2.0.x/010_manual/040_contributors.html">contribution</a>
+to the project or becoming a
+<a href="https://opencollective.com/doctoolchain/contribute">sponsor</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources">Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs-as-co.de/news/arc42">Let&#8217;s add content!</a></p>
+</li>
+<li>
+<p><a href="https://docs-as-co.de/news/awesome-asciidoc">More about AsciiDoc</a></p>
+</li>
+<li>
+<p><a href="https://docs-as-co.de/news/gradle-asciidoc-build/">Simple AsciiDoc
+Build with Gradle</a></p>
+</li>
+<li>
+<p><a href="https://rdmueller.github.io/pdf-output/">Beyond HTML</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+        </p>
+
+        <style>
+.feedback--answer {
+    display: inline-block;
+}
+
+.feedback--answer-no {
+    margin-left: 1em;
+}
+
+.feedback--response {
+    display: none;
+    margin-top: 1em;
+}
+
+.feedback--response__visible {
+    display: block;
+}
+</style>
+
+<div class="d-print-none">
+    <h2 class="feedback--title">Feedback</h2>
+    <p class="feedback--question">Was this page helpful?</p>
+    <button class="feedback--answer feedback--answer-yes">Yes</button>
+    <button class="feedback--answer feedback--answer-no">No</button>
+    <p class="feedback--response feedback--response-yes">
+        Glad to hear it! Please <a href="https://github.com/docToolchain/tutorials/issues/new?title=Docs%3A+Feedback+for+%27Quickstart%27%20%F0%9F%91%8D&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23page:01_Tutorials/010_Quickstart.adoc">tell us
+    how we can improve</a>.
+    </p>
+    <p class="feedback--response feedback--response-no">
+        Sorry to hear that. Please <a href="https://github.com/docToolchain/tutorials/issues/new?title=Docs%3A+Feedback+for+%27Quickstart%27%20%F0%9F%91%8E&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23page:01_Tutorials/010_Quickstart.adoc">tell
+    us how we can improve</a>.
+    </p>
+</div>
+<script>
+    const yesButton = document.querySelector('.feedback--answer-yes');
+    const noButton = document.querySelector('.feedback--answer-no');
+    const yesResponse = document.querySelector('.feedback--response-yes');
+    const noResponse = document.querySelector('.feedback--response-no');
+    const disableButtons = () => {
+        yesButton.disabled = true;
+        noButton.disabled = true;
+    };
+    const sendFeedback = (value) => {
+        if (typeof ga !== 'function') return;
+        const args = {
+            command: 'send',
+            hitType: 'event',
+            category: 'Helpful',
+            action: 'click',
+            label: window.location.pathname,
+            value: value
+        };
+        ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+    };
+    yesButton.addEventListener('click', () => {
+        yesResponse.classList.add('feedback--response__visible');
+        disableButtons();
+        sendFeedback(1);
+    });
+    noButton.addEventListener('click', () => {
+        noResponse.classList.add('feedback--response__visible');
+        disableButtons();
+        sendFeedback(0);
+    });
+</script>
+
+
+        <br>
+
+        <!--div class="text-muted mt-5 pt-3 border-top">Last modified July 3, 2019: <a
+                href="https://github.com/google/docsy-example/commit/d6aa89c8b24089d7e6741030864eff209465e896">Added
+            links to user guide repo (d6aa89c)</a>
+        </div-->
+    </div>
+
+
+			</main>
+
+		</div>
+	</div>
+
+
+	
+    <!--footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">&copy; 2020 | based on <a href="https://arc42.org">arc42 7.0</a> | mixed with <a href="http://getbootstrap.com/">Bootstrap v5.0.0-beta</a> | Baked with <a href="http://jbake.org">JBake v2.6.7</a></span>
+        </div>
+    </footer-->
+
+    <footer class="bg-dark py-5 row d-print-none">
+        <div class="container-fluid mx-sm-5">
+            <div class="row">
+                <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+
+
+                    <ul class="list-inline mb-0">
+                        
+                        
+                        
+                    </ul>
+
+
+                </div>
+                <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+
+
+                    <ul class="list-inline mb-0">
+
+                        
+                        <li aria-label="GitHub" class="list-inline-item mx-2 h3" data-original-title="GitHub" data-placement="top"
+                            data-toggle="tooltip" title="">
+                            <a class="text-white" href="https://github.com/docToolchain/tutorials" rel="noopener noreferrer"
+                               target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        
+
+                        
+
+
+                    </ul>
+
+
+                </div>
+                <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+
+                        <small class="text-white">built with <a href="https://doctoolchain.org">docToolchain</a> and <a href="https://jbake.org">jBake</a> <br /> theme: <a href="https://www.docsy.dev/">docsy</a></small>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script crossorigin="anonymous"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            src="../js/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            src="../js/bootstrap.min.js"></script>
+
+
+    <script crossorigin="anonymous"
+            integrity="sha256-tfwbKdJGWDWEQlS9TYBHOOryTAzsUwCbTGiZmJvlWkc=" src="..//js/main.min.b5fc1b29d2465835844254bd4d804738eaf24c0cec53009b4c6899989be55a47.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/blocks.js" ></script>
+    <script src="../js/prettify.js"></script>
+
+
+</body>
+</html>
